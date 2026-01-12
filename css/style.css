@@ -1,0 +1,316 @@
+/* ==============================================
+   NutriScan 2.0 - Fixed Dark Mode & Style
+============================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* --- Light Mode Renkleri --- */
+  --primary: #10b981;       
+  --primary-dark: #059669;
+  --secondary: #3b82f6;     
+  --bg-body: #f8fafc;       
+  --bg-card: #ffffff;
+  --text-main: #1e293b;     /* Koyu Gri/Siyah */
+  --text-muted: #64748b;    /* Orta Gri */
+  --border-color: #e2e8f0;
+  
+  /* Efektler */
+  --radius: 16px;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Dark Mode Değişkenleri --- */
+[data-theme="dark"] {
+  --bg-body: #0f172a;       /* Çok koyu lacivert (Neredeyse siyah) */
+  --bg-card: #1e293b;       /* Koyu gri paneller */
+  --text-main: #f1f5f9;     /* Kırık BEYAZ (Yazıların okunmasını sağlayan bu) */
+  --text-muted: #cbd5e1;    /* Açık gri */
+  --border-color: #334155;  /* Koyu çerçeveler */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Genel Ayarlar --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main); /* Varsayılan yazıyı değişkene bağladık */
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+/* Tüm Başlıkları ve Paragrafları Zorla Boya */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
+  color: var(--text-main) !important;
+}
+
+p, span, div, li {
+  color: inherit; /* Üst elemanın rengini al */
+}
+
+a { text-decoration: none; transition: var(--transition); }
+
+/* --- Bootstrap Override (Siyah Yazı Sorunu Çözümü) --- */
+/* Dark Mode'da Bootstrap'in text-dark ve text-muted sınıflarını eziyoruz */
+[data-theme="dark"] .text-dark {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--bg-card) !important; /* Beyaz kutuları koyu yap */
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #334155 !important;
+  color: var(--text-main) !important;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+/* Navbar Dark Mode */
+[data-theme="dark"] .navbar {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--primary) !important;
+  letter-spacing: -0.5px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-main) !important; /* Linkler dark mode'da beyaz olsun */
+  margin: 0 0.5rem;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* Hamburger Menü İkonu Rengi */
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1); /* İkonu beyaza çevir */
+}
+
+/* --- Kartlar --- */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+  padding: 1.5rem;
+  background: #fff; /* Ürün resimleri net görünsün diye arkası hep beyaz */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+  color: var(--text-main);
+}
+
+.card-title {
+  color: var(--text-main) !important;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: var(--text-muted) !important;
+  font-size: 0.9rem;
+}
+
+/* --- Form Elemanları & Arama Kutusu --- */
+.input-group {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color);
+}
+
+.form-control {
+  background-color: var(--bg-card) !important;
+  border: none;
+  color: var(--text-main) !important;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.form-control:focus {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  box-shadow: none;
+  /* Dış çerçeve efekti için parent'a stil verilebilir veya basitçe: */
+  outline: 2px solid var(--primary); 
+}
+
+/* --- Butonlar --- */
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  color: #fff !important; /* Buton yazısı hep beyaz */
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Toggle Butonu */
+#darkModeToggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white !important;
+  border: none;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+#darkModeToggle:hover {
+  transform: rotate(30deg) scale(1.1);
+}
+
+/* Favori Butonu */
+.btn-fav {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 10;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-fav:hover {
+  transform: scale(1.1);
+}
+
+.btn-fav.active {
+  background: #fee2e2;
+  color: #ef4444;
+  border-color: #fca5a5;
+}
+
+/* Animasyonlar */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.floating-anim {
+  animation: float 4s ease-in-out infinite;
+}
+.hover-scale { transition: transform 0.2s; }
+.hover-scale:hover { transform: scale(1.05); }
+
+/* List Group (Detay sayfası için) */
+.list-group-item {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+/* ==============================================
+   Skeleton Loading (İskelet Animasyonu)
+============================================== */
+.skeleton {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 8px;
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+  opacity: 0.7;
+}
+
+/* Dark Mode için daha koyu iskelet */
+[data-theme="dark"] .skeleton {
+  background: #1e293b; /* Koyu gri */
+  background: linear-gradient(110deg, #1e293b 8%, #334155 18%, #1e293b 33%);
+  background-size: 200% 100%;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* İskelet Parçaları */
+.skeleton-img {
+  width: 100%;
+  height: 200px; /* Kart resmi kadar */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.skeleton-title {
+  height: 24px;
+  margin-bottom: 15px;
+  width: 75%;
+}
+
+.skeleton-text {
+  height: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.skeleton-btn {
+  height: 40px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+}

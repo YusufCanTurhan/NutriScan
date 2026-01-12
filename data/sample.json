@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "code": "1234567890123",
+      "product_name": "Süt",
+      "brands": "Sütaş",
+      "image_front_url": "https://via.placeholder.com/300x200?text=Süt",
+      "nutriments": {
+        "energy_100g": "60 kcal",
+        "fat_100g": "3 g",
+        "saturated-fat_100g": "2 g",
+        "carbohydrates_100g": "5 g",
+        "sugars_100g": "5 g",
+        "proteins_100g": "3 g",
+        "salt_100g": "0.1 g"
+      }
+    },
+    {
+      "code": "2345678901234",
+      "product_name": "Tost Ekmeği",
+      "brands": "Uno",
+      "image_front_url": "https://via.placeholder.com/300x200?text=Tost+Ekmeği",
+      "nutriments": {
+        "energy_100g": "250 kcal",
+        "fat_100g": "2 g",
+        "saturated-fat_100g": "0.5 g",
+        "carbohydrates_100g": "50 g",
+        "sugars_100g": "5 g",
+        "proteins_100g": "8 g",
+        "salt_100g": "1 g"
+      }
+    },
+    {
+      "code": "3456789012345",
+      "product_name": "Beyaz Peynir",
+      "brands": "Pınar",
+      "image_front_url": "https://via.placeholder.com/300x200?text=Beyaz+Peynir",
+      "nutriments": {
+        "energy_100g": "270 kcal",
+        "fat_100g": "20 g",
+        "saturated-fat_100g": "15 g",
+        "carbohydrates_100g": "1 g",
+        "sugars_100g": "1 g",
+        "proteins_100g": "17 g",
+        "salt_100g": "2 g"
+      }
+    }
+  ]
+}
