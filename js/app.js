@@ -236,3 +236,13 @@ function addToList(code, name, brand, image) {
     window.location.href = "list.html";
   }
 }
+
+// İletişim Formu Kontrolü
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Mesajınız alındı! Teşekkürler.');
+    contactForm.reset();
+  });
+}
