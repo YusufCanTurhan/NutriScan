@@ -1,6 +1,7 @@
 NutriScan, tüketicilerin market alışverişlerinde ne yediklerini gerçekten bilmelerini sağlayan, Open Food Facts veritabanını kullanan modern bir web uygulamasıdır. Barkod tarama özelliği, detaylı besin analizleri ve ürün karşılaştırma araçları ile sağlıklı yaşamı destekler.
 Genellikle diyet yapanlar, glutene karşı alerjisi olanlar ve sporcular kullanır.
 
+---------------------------------------------------------------------------------------------
 
 ✨Özellikler
 
@@ -22,14 +23,15 @@ Genellikle diyet yapanlar, glutene karşı alerjisi olanlar ve sporcular kullan�
 
 -Tam PWA Desteği: İnternet olmadan çalışabilme ve ana ekrana uygulama olarak eklenebilme.
 
+---------------------------------------------------------------------------------------------
 
-Kullanılan Teknolojiler
+Kullanılan Teknolojiler:
 
 CSS Çatısı: Bootstrap 5 
 JS Kütüphanesi: html5-qrcode 
-
 Proje, dünyanın en büyük açık gıda veritabanı olan Open Food Facts API'sini kullanmaktadır.
 
+---------------------------------------------------------------------------------------------
 
 PWA (Progressive Web App) Özellikleri
 
@@ -42,4 +44,6 @@ Yüklenebilir: "Ana Ekrana Ekle" butonu ile telefona kurulabilir.
 Performans: Görseller ve statik dosyalar önbelleğe alınarak hızlı yükleme sağlanır.
 
 
+
  
+
