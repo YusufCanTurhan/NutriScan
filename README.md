@@ -3,6 +3,12 @@ Genellikle diyet yapanlar, glutene karşı alerjisi olanlar ve sporcular kullan�
 
 ---------------------------------------------------------------------------------------------
 
+<img width="1903" height="944" alt="Image" src="https://github.com/user-attachments/assets/bbdb9777-209e-4519-b993-17fe2bd93dc3" />
+<img width="1905" height="944" alt="Image" src="https://github.com/user-attachments/assets/ce3211f0-1938-47f7-800e-d4852a3ae3f5" />
+<img width="1905" height="945" alt="Image" src="https://github.com/user-attachments/assets/285b512a-3b4d-4b36-ad9b-09dff0eb4126" />
+
+---------------------------------------------------------------------------------------------
+
 ✨Özellikler
 
 -Gelişmiş Arama: Ürün adına veya kategoriye göre (Süt, Çikolata, Vegan vb.) hızlı arama.
@@ -46,4 +52,5 @@ Performans: Görseller ve statik dosyalar önbelleğe alınarak hızlı yükleme
 
 
  
+
 
