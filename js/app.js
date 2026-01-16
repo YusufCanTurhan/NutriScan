@@ -237,12 +237,4 @@ function addToList(code, name, brand, image) {
   }
 }
 
-// İletişim Formu Kontrolü
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Mesajınız alındı! Teşekkürler.');
-    contactForm.reset();
-  });
-}
+
